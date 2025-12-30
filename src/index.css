@@ -1,4 +1,64 @@
+
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap");
 @import "tailwindcss";
+
+/* ===============================
+   Gafiya Font Faces
+================================ */
+@font-face {
+  font-family: "Gafiya";
+  src: url("src/assets/gafiya-regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Avenue";
+  src: url("src/assets/Avenue.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Goudy";
+  src: url("src/assets/goudy-regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer utilities {
+  .font-eb-garamond {
+    font-family: "EB Garamond", serif;
+  }
+}
+
+@layer utilities {
+  .font-goudy {
+    font-family: "Goudy", serif;
+  }
+}
+
+
+
+@layer utilities {
+  .font-gafiya {
+    font-family: "Gafiya", sans-serif;
+  }
+}
+
+@layer utilities {
+  .font-avenue {
+    font-family: "Avenue", sans-serif;
+  }
+}
+
+p, ul, ol, li, a, span, div {
+  font-family: "Goudy", serif;
+}
+
 
 @keyframes marquee {
   0% {

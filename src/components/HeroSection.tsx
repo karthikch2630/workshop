@@ -11,13 +11,13 @@ export default function HeroSection() {
       {/* ================= HERO CONTENT ================= */}
       <div className="max-w-6xl mx-auto px-6 pt-20 pb-10 text-center">
         {/* Headline */}
-        <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold leading-tight text-slate-900">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold leading-tight text-slate-900 font-eb-garamond">
           Run{" "}
-          <span className="text-[#1e88e5]">
+          <span className="text-[#1e88e5] font-avenue">
             High-Quality Real Estate Ads
           </span>{" "}
           Peacefully using a{" "}
-          <span className="text-[#1e88e5]">
+          <span className="text-[#1e88e5] font-avenue">
             Proven Meta Ads Method
           </span>
         </h1>
