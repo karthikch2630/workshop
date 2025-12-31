@@ -1,4 +1,6 @@
-import { CheckCircle } from "lucide-react";
+
+import {FilledArrowIcon} from "./FilledIcons";
+
 import CTA from "./CTA";
 
 export default function WhoIsThisForSection() {
@@ -67,78 +69,88 @@ export default function WhoIsThisForSection() {
 
 
                     {/* RIGHT CONTENT */}
-                    <div className="bg-slate-50 border border-slate-200 rounded-2xl p-8 sm:p-10 h-full flex flex-col justify-center">
+                    {/* RIGHT CONTENT */}
+                    <div className="h-full flex flex-col justify-center">
 
-                        <h3 className="text-3xl sm:text-4xl font-semibold text-slate-900 mb-6">
-                            Who is this workshop for?
+                        <h3 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-slate-900 mb-10">
+                            Who is this <br /> workshop for?
                         </h3>
 
-                        <p className="text-slate-600 mb-8">
-                            This workshop is designed for real estate professionals who want
-                            <span className="font-medium text-slate-800">
-                                {" "}predictable lead generation without chaos.
-                            </span>
-                        </p>
+                        {/* <p className="text-slate-600 mb-8">
+    This workshop is designed for real estate professionals who want
+    <span className="font-medium text-slate-800">
+      {" "}predictable lead generation without chaos.
+    </span>
+  </p> */}
 
-                        <ul className="space-y-6 text-slate-600 leading-relaxed">
-                            <li className="flex gap-4">
-                                <CheckCircle className="text-[#0071BC] mt-1 shrink-0" size={20} />
-                                <span>
-                                    You are a <strong>developer, builder, or promoter</strong> who
-                                    has tried running Meta (Facebook / Instagram) ads but received
-                                    <strong> low-quality or non-serious leads</strong>
+                        <ul className="divide-y divide-dashed divide-slate-200">
+                            <li className="flex items-start gap-2 py-2">
+                                <span className="flex h-10 w-10 shrink-0 items-center justify-center text-black">
+                                    <FilledArrowIcon />
                                 </span>
+
+                                <p className="text-[15px] sm:text-base text-slate-700 leading-relaxed">
+                                    You are a <strong>developer, builder, or promoter</strong> who has tried
+                                    running Meta (Facebook / Instagram) ads but received
+                                    <strong> low-quality or non-serious leads</strong>.
+                                </p>
                             </li>
 
-                            <li className="flex gap-4">
-                                <CheckCircle className="text-[#0071BC] mt-1 shrink-0" size={20} />
-                                <span>
-                                    You are advertising <strong>open plots, flats, or villas</strong>
-                                    , but enquiries are not converting into
-                                    <strong> site visits or sales</strong>
+                            <li className="flex items-start gap-2 py-2">
+                                <span className="flex h-10 w-10 shrink-0 items-center justify-center text-black">
+                                    <FilledArrowIcon />
                                 </span>
+                                <p className="text-[15px] sm:text-base text-slate-700 leading-relaxed">
+                                    You are advertising <strong>open plots, flats, or villas</strong>, but
+                                    enquiries are not converting into
+                                    <strong> site visits or sales</strong>.
+                                </p>
                             </li>
 
-                            <li className="flex gap-4">
-                                <CheckCircle className="text-[#0071BC] mt-1 shrink-0" size={20} />
-                                <span>
-                                    Your <strong>ad cost increases</strong> the moment you raise
-                                    budgets and performance becomes
-                                    <strong> unstable</strong>
+                            <li className="flex items-start gap-2 py-2">
+                                <span className="flex h-10 w-10 shrink-0 items-center justify-center text-black">
+                                    <FilledArrowIcon />
                                 </span>
+                                <p className="text-[15px] sm:text-base text-slate-700 leading-relaxed">
+                                    Your <strong>ad cost increases</strong> the moment you raise budgets and
+                                    performance becomes <strong>unstable</strong>.
+                                </p>
                             </li>
 
-                            <li className="flex gap-4">
-                                <CheckCircle className="text-[#0071BC] mt-1 shrink-0" size={20} />
-                                <span>
-                                    You tried <strong>duplicating campaigns or ad sets</strong> to
-                                    scale, but results dropped or became
-                                    <strong> inconsistent</strong>
+                            <li className="flex items-start gap-2 py-2">
+                                <span className="flex h-10 w-10 shrink-0 items-center justify-center text-black">
+                                    <FilledArrowIcon />
                                 </span>
+                                <p className="text-[15px] sm:text-base text-slate-700 leading-relaxed">
+                                    You tried <strong>duplicating campaigns or ad sets</strong> to scale, but
+                                    results dropped or became <strong>inconsistent</strong>.
+                                </p>
                             </li>
 
-                            <li className="flex gap-4">
-                                <CheckCircle className="text-[#0071BC] mt-1 shrink-0" size={20} />
-                                <span>
-                                    You feel <strong>confused about targeting, creatives,</strong>
-                                    or campaign structure and unsure what truly works for
-                                    <strong> real estate projects</strong>
+                            <li className="flex items-start gap-2 py-2">
+                                <span className="flex h-10 w-10 shrink-0 items-center justify-center text-black">
+                                    <FilledArrowIcon />
                                 </span>
+                                <p className="text-[15px] sm:text-base text-slate-700 leading-relaxed">
+                                    You feel <strong>confused about targeting, creatives,</strong> or campaign
+                                    structure and unsure what truly works for
+                                    <strong> real estate projects</strong>.
+                                </p>
                             </li>
 
-                            <li className="flex gap-4">
-                                <CheckCircle className="text-[#0071BC] mt-1 shrink-0" size={20} />
-                                <span>
+                            <li className="flex items-start gap-2 py-2">
+                                <span className="flex h-10 w-10 shrink-0 items-center justify-center text-black">
+                                    <FilledArrowIcon />
+                                </span>
+                                <p className="text-[15px] sm:text-base text-slate-700 leading-relaxed">
                                     You want a <strong>simple, proven system</strong> to generate
-                                    <strong> genuine high-intent real estate leads</strong>
-                                    {" "}without wasting money
-                                </span>
+                                    <strong> genuine high-intent real estate leads</strong> without wasting
+                                    money.
+                                </p>
                             </li>
                         </ul>
-
-
-
                     </div>
+
                 </div>
             </div>
             {/* ================= BOTTOM QUOTE ================= */}
@@ -151,7 +163,7 @@ export default function WhoIsThisForSection() {
                     </span>”
                 </p>
             </div>
-        <CTA/>
+            <CTA />
         </section>
     );
 }

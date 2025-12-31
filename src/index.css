@@ -28,22 +28,22 @@
   font-style: normal;
   font-display: swap;
 }
-
+/* 
 @layer utilities {
   .font-eb-garamond {
     font-family: "EB Garamond", serif;
   }
-}
+} */
 
-@layer utilities {
+/* @layer utilities {
   .font-goudy {
     font-family: "Goudy", serif;
   }
-}
+} */
 
 
 
-@layer utilities {
+/* @layer utilities {
   .font-gafiya {
     font-family: "Gafiya", sans-serif;
   }
@@ -53,11 +53,11 @@
   .font-avenue {
     font-family: "Avenue", sans-serif;
   }
-}
+} */
 
-p, ul, ol, li, a, span, div {
+/* p, ul, ol, li, a, span, div {
   font-family: "Goudy", serif;
-}
+} */
 
 
 @keyframes marquee {

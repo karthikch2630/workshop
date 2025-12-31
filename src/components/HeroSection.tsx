@@ -23,7 +23,7 @@ export default function HeroSection() {
         </h1>
 
         {/* Description */}
-        <p className="mt-6 max-w-3xl mx-auto text-base sm:text-lg text-slate-600 leading-relaxed">
+        <p className="mt-6 max-w-3xl mx-auto text-lg sm:text-xl md:text-2xl text-slate-600 leading-relaxed">
           Learn the updated{" "}
           <strong>2025 Meta Ads strategy</strong> to generate{" "}
           <strong>high-intent leads</strong> for{" "}
@@ -32,6 +32,7 @@ export default function HeroSection() {
           </strong>{" "}
           — without wasted ad spend or complicated campaign structures.
         </p>
+
 
         {/* Quote */}
         <p className="mt-4 text-sm sm:text-base italic text-slate-500">
