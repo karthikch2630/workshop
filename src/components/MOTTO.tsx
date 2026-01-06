@@ -20,7 +20,7 @@ export default function FounderStorySection() {
           {/* LEFT IMAGE */}
           <div className="p-6 sm:p-10 flex justify-center items-center bg-slate-50">
             <img
-              src="/founder.png" // replace with your image
+              src="/founder.jpg" // replace with your image
               alt="Rishitha Varma – Founder Digi Thriva"
               className="rounded-2xl object-cover w-full max-w-[420px] shadow-md"
             />
@@ -34,7 +34,7 @@ export default function FounderStorySection() {
             </p>
 
             <h3 className="text-2xl sm:text-3xl font-semibold text-slate-900 mb-6">
-              Founder – Digi Thriva (Advertising Agency)
+              Founder – Digithriva
             </h3>
 
             <div className="space-y-5 text-slate-700 leading-relaxed text-sm sm:text-base">
@@ -70,7 +70,7 @@ export default function FounderStorySection() {
               </p>
 
               <p>
-                That’s why I built <strong>Digi Thriva</strong> and this workshop —
+                That’s why I built <strong>Digithriva</strong> and this workshop —
                 to help you run real estate ads
                 <strong> clearly, confidently, and without stress</strong>.
               </p>

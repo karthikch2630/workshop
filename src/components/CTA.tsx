@@ -1,3 +1,5 @@
+
+
 export default function CTA() {
   return (
     <section className="w-full py-5">
@@ -37,31 +39,47 @@ export default function CTA() {
           {/* CTA BUTTON */}
           <div className="relative w-full max-w-3xl mx-auto flex justify-center">
 
-  {/* RAYS */}
-  <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-[140%] h-[160%] bg-[conic-gradient(from_180deg,rgba(14,165,233,0.35),transparent,rgba(14,165,233,0.35))] blur-3xl opacity-70"></div>
+            {/* RAYS */}
+            <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-[140%] h-[160%] bg-[conic-gradient(from_180deg,rgba(14,165,233,0.35),transparent,rgba(14,165,233,0.35))] blur-3xl opacity-70"></div>
 
-  {/* CORE GLOW */}
-  <div className="absolute inset-0 rounded-md bg-[#0ea5e9]/50 blur-2xl"></div>
+            {/* CORE GLOW */}
+            <div className="absolute inset-0 rounded-md bg-[#0ea5e9]/50 blur-2xl"></div>
 
-  {/* BUTTON */}
-  <button
-    className="
-      relative z-10
-      w-full
-      bg-[#0ea5e9]
-      hover:bg-[#0284c7]
-      text-white
-      text-lg sm:text-xl
-      font-semibold
-      py-5
-      rounded-md
-      shadow-xl
-      transition
-    "
-  >
-    JOIN NOW AT ₹99
-  </button>
-</div>
+            {/* BUTTON */}
+            <button
+              className="
+    relative z-10
+    w-full
+    bg-[#0ea5e9]
+    hover:bg-[#0284c7]
+    text-white
+    text-lg sm:text-xl
+    font-semibold
+    py-5
+    rounded-md
+    shadow-xl
+    transition-all
+    duration-300
+    active:scale-95
+  "
+              style={{
+                animation: 'glow 2s ease-in-out infinite',
+                boxShadow: '0 0 20px rgba(14, 165, 233, 0.6), 0 0 40px rgba(2, 132, 199, 0.4)',
+              }}
+            >
+              JOIN NOW AT ₹99
+
+              <style>{`
+    @keyframes glow {
+      0%, 100% {
+        box-shadow: 0 0 20px rgba(14, 165, 233, 0.6), 0 0 40px rgba(2, 132, 199, 0.4);
+      }
+      50% {
+        box-shadow: 0 0 30px rgba(14, 165, 233, 0.9), 0 0 60px rgba(2, 132, 199, 0.6), 0 0 80px rgba(14, 165, 233, 0.3);
+      }
+    }
+  `}</style>
+            </button> </div>
 
 
           {/* SUB NOTE */}
@@ -72,7 +90,7 @@ export default function CTA() {
           {/* TRUST BADGES */}
           <div className="mt-10 flex justify-center gap-6 flex-wrap opacity-90">
             <img src="/ctaimage.png" alt="Money Back" className="h-10" />
-            
+
           </div>
 
         </div>

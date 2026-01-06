@@ -5,7 +5,7 @@ export default function Footer() {
 
         {/* ================= COPYRIGHT ================= */}
         <p className="font-medium text-slate-600">
-          © 2026 | Digi Thriva – Advertising Agency
+          © 2026 | Digithriva
         </p>
         <p className="mt-0.5">All Rights Reserved.</p>
 

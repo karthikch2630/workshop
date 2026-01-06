@@ -1,6 +1,15 @@
-
 @import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap");
+
+
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Cardo:ital,wght@0,400;0,700;1,400&family=DM+Serif+Display:ital@0;1&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 @import "tailwindcss";
+
+/* Create a class for Albert Sans */
+.font-albert-sans {
+  font-family: 'Albert Sans', sans-serif;
+}
 
 /* ===============================
    Gafiya Font Faces
@@ -28,6 +37,7 @@
   font-style: normal;
   font-display: swap;
 }
+
 /* 
 @layer utilities {
   .font-eb-garamond {
@@ -64,6 +74,7 @@
   0% {
     transform: translateX(0%);
   }
+
   100% {
     transform: translateX(-50%);
   }
@@ -71,4 +82,21 @@
 
 .animate-marquee {
   animation: marquee 35s linear infinite;
+}
+
+@keyframes blink {
+
+  0%,
+  49% {
+    opacity: 1;
+  }
+
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.animate-blink {
+  animation: blink 1s infinite;
 }
