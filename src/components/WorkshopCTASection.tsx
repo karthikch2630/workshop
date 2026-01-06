@@ -1,117 +1,117 @@
 import RealEstateResultsCarousel from "./RealEstateResultsCarousel";
-export default function WorkshopCTASection() {
-      
-    return (
-        <section className="w-full bg-white py-12">
-            <div className="max-w-6xl mx-auto px-6">
-                <div className="
-  relative
-  overflow-hidden
-  border border-slate-200
-  rounded-3xl
-  bg-white
-  p-8 sm:p-10
-  text-center
-  shadow-md
-">
 
-  {/* Subtle glow */}
-  <div className="absolute -top-24 left-1/2 -translate-x-1/2 w-[280px] h-[280px] bg-[#0071BC]/15 blur-[90px]" />
-
-  {/* ================= COUNTDOWN ================= */}
-  <p className="relative text-lg uppercase tracking-widest text-slate-500 mb-4">
-    Workshop begins in
-  </p>
-
-  <div className="relative flex justify-center gap-6 mb-8">
-    {[
-      { label: "Days", value: "00" },
-      { label: "Hrs", value: "04" },
-      { label: "Min", value: "00" },
-      { label: "Sec", value: "23" },
-    ].map((item) => (
-      <div
-        key={item.label}
-        className="
-          w-16 sm:w-20
-          rounded-xl
-          border border-slate-200
-          bg-slate-50
-          py-3
-        "
-      >
-        <div className="text-2xl sm:text-3xl font-semibold text-slate-900">
-          {item.value}
+function CTAComponent() {
+  return (
+    <>
+      <div className="max-w-5xl mx-auto p-8 bg-white rounded-lg border border-gray-200">
+        {/* Countdown Timer */}
+        <div className="text-center mb-6">
+          <p className="text-gray-700 text-lg mb-3 font-albert-sans">
+            Workshop begins in
+          </p>
+          <div className="flex justify-center gap-4">
+            <div className="text-center">
+              <div className="text-3xl font-bold text-gray-800">04</div>
+              <div className="text-sm text-gray-600">Days</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-gray-800">08</div>
+              <div className="text-sm text-gray-600">Hrs</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-gray-800">42</div>
+              <div className="text-sm text-gray-600">Mins</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-gray-800">35</div>
+              <div className="text-sm text-gray-600">Secs</div>
+            </div>
+          </div>
         </div>
-        <div className="mt-1 text-[10px] uppercase tracking-wide text-slate-500">
-          {item.label}
+
+        {/* Date and Time Info */}
+        <div className="flex items-center justify-center gap-3 mb-6 text-gray-700 font-albert-sans">
+          <span className="text-2xl">📋</span>
+          <span className="font-semibold">Saturday:</span>
+          <span>10th Jan'26</span>
+          <span className="text-2xl">⏰</span>
+          <span className="font-semibold">3 Hours:</span>
+          <span>7 PM to 10 PM</span>
+        </div>
+
+        {/* CTA Button */}
+        <div className="mb-4">
+          <button
+            className="
+              font-albert-sans
+              relative z-10
+              w-full
+              bg-[#00bcd4]
+              hover:bg-[#00acc1]
+              text-white
+              text-xl
+              font-bold
+              py-5
+              rounded-md
+              transition-all
+              duration-300
+              active:scale-95
+              uppercase
+              tracking-wide
+            "
+            style={{
+              animation: 'glow 2s ease-in-out infinite',
+              boxShadow: '0 4px 20px rgba(0, 188, 212, 0.4)',
+            }}
+          >
+            JOIN NOW AT ₹99
+          </button>
+
+          <style>{`
+            @keyframes glow {
+              0%, 100% {
+                box-shadow: 0 4px 20px rgba(0, 188, 212, 0.4);
+              }
+              50% {
+                box-shadow: 0 4px 30px rgba(0, 188, 212, 0.6), 0 0 40px rgba(0, 188, 212, 0.3);
+              }
+            }
+          `}</style>
+        </div>
+
+        {/* Warning Message */}
+        <div className="text-center text-gray-600 mb-8 font-albert-sans">
+          <span className="text-yellow-500 mr-2">⚠️</span>
+          Join if it feels right. No pressure (:
+        </div>
+
+        {/* Trust Badges - Single Image */}
+        <div className="flex justify-center items-center">
+          <img 
+            src="/ctaimage.png" 
+            alt="Trust Badges - Money Back, Quality Guarantee, 100% Satisfaction" 
+            className="h-20 object-contain"
+          />
         </div>
       </div>
-    ))}
-  </div>
 
-  {/* ================= DATE & TIME ================= */}
-  <div className="relative text-sm text-slate-600 mb-8">
-    <strong>Monday:</strong> 22nd Jan ’26 &nbsp;|&nbsp;
-    <strong>3 Hours:</strong> 7 PM – 9 PM
-  </div>
+      {/* ================= SOCIAL PROOF ================= */}
+      <div className="mt-24 text-center">
+        <h2 className="text-2xl sm:text-3xl font-semibold text-slate-900 font-albert-sans">
+          Proven Results from Real Estate Campaigns ❤️{" "}
+          <span className="text-[#0071BC]">#grateful</span>
+        </h2>
 
-  {/* ================= CTA ================= */}
-  <button className="
-    relative
-    inline-flex
-    items-center
-    justify-center
-    gap-2
-    px-14
-    py-4
-    rounded-full
-    bg-[#0071BC]
-    text-white
-    text-base
-    font-semibold
-    hover:bg-[#005fa3]
-    transition
-    shadow-lg
-  ">
-    Join Now at ₹99
-  </button>
+        <p className="mt-3 text-sm sm:text-base text-slate-600 font-albert-sans">
+          Grateful for the trust from{" "}
+          <strong>developers, builders, and channel partners</strong>
+        </p>
 
-  {/* ================= NO PRESSURE ================= */}
-  <p className="relative mt-4 text-sm text-slate-500">
-    Join if it feels right. No pressure 🙂
-  </p>
-
-  {/* ================= TRUST ================= */}
-  <div className="relative mt-8 flex flex-wrap justify-center gap-6 text-xs text-slate-500">
-    <span className="flex items-center gap-2">
-      ✔ Simple & Standard
-    </span>
-    <span className="flex items-center gap-2">
-      ✔ Quality Guaranteed
-    </span>
-  </div>
-</div>
-
-
-
-                {/* ================= SOCIAL PROOF ================= */}
-                <div className="mt-24 text-center">
-                    <h2 className="text-2xl sm:text-3xl font-semibold text-slate-900">
-                        Proven Results from Real Estate Campaigns ❤️{" "}
-                        <span className="text-[#0071BC]">#grateful</span>
-                    </h2>
-
-                    <p className="mt-3 text-sm sm:text-base text-slate-600">
-                        Grateful for the trust from{" "}
-                        <strong>developers, builders, and channel partners</strong>
-                    </p>
-
-                    {/* Testimonials */}
-                    <RealEstateResultsCarousel />
-                </div>
-
-            </div>
-        </section>
-    );
+        {/* Testimonials */}
+        <RealEstateResultsCarousel />
+      </div>
+    </>
+  );
 }
+
+export default CTAComponent;
