@@ -2,14 +2,44 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useRef, useState } from "react";
 
 const testimonials = [
-  { text: "Finally getting consistent, high-intent leads for open plots without constant ad tweaks.", img: "/testimonial-1.png" },
-  { text: "This method simplified Meta Ads for our apartment project and improved lead quality significantly.", img: "/testimonial-2.png" },
-  { text: "Lower cost per lead and better follow-ups for villa projects. Very practical strategy.", img: "/testimonial-3.png" },
-  { text: "Consistent lead flow for gated community launches.", img: "/testimonial-4.png" },
-  { text: "Better closing support for channel partners.", img: "/testimonial-5.png" },
-  { text: "Stable CPL across multiple project locations.", img: "/testimonial-6.png" },
-  { text: "Reliable Meta Ads system for high-ticket real estate.", img: "/testimonial-7.png" },
+  {
+    text: "Getting consistent leads and multiple sales with very low ad cost. - Karthik",
+    name: "Karthik",
+    img: "/testimonial-1.jpeg",
+  },
+  {
+    text: "High-quality real estate leads and faster sales at a much lower CPL. - Srinivas",
+    name: "Srinivas",
+    img: "/testimonial-2.jpeg",
+  },
+  {
+    text: "More site visits and closed deals without increasing ad spend. - deepika",
+    name: "Ramesh",
+    img: "/testimonial-3.jpeg",
+  },
+  {
+    text: "Stable leads and regular sales even for high-ticket projects. - Mahesh",
+    name: "Mahesh",
+    img: "/testimonial-4.jpeg",
+  },
+  {
+    text: "Lower cost per lead and better follow-ups that convert. - Rahul ",
+    name: "Rahul",
+    img: "/testimonial-1.jpeg",
+  },
+  {
+    text: "Consistent leads and sales across multiple locations with low budget. - Subhash Reddy",
+    name: "Venkatesh",
+    img: "/testimonial-2.jpeg",
+  },
+  {
+    text: "Finally achieving sales with Meta Ads without wasting money. - Ashok Naidu",
+    name: "Karthik R",
+    img: "/testimonial-4.jpeg",
+  },
 ];
+
+
 
 export default function RealEstateResultsCarousel() {
   const [index, setIndex] = useState(0);
