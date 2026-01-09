@@ -19,7 +19,7 @@ export default function WhatYouWillLearnSection() {
 
             {/* Image */}
             <img
-                            src="/host.png"
+                            src="/method.png"
                             alt="Workshop Host"
                             className="
       relative z-10
