@@ -14,13 +14,13 @@ const testimonials = [
 const TOTAL = testimonials.length;
 
 export default function RealEstateResultsCarousel() {
-  const [visible, setVisible] = useState(1);
   const [index, setIndex] = useState(1);
+  const [visible, setVisible] = useState(1);
   const [transition, setTransition] = useState(true);
 
   const touchStartX = useRef<number | null>(null);
 
-  /* RESPONSIVE SLIDES COUNT */
+  /* RESPONSIVE COUNT */
   useEffect(() => {
     const updateVisible = () => {
       if (window.innerWidth >= 1024) setVisible(3);
@@ -33,14 +33,14 @@ export default function RealEstateResultsCarousel() {
     return () => window.removeEventListener("resize", updateVisible);
   }, []);
 
-  /* CLONE FIRST & LAST SLIDES */
+  /* CLONES */
   const slides = [
     testimonials[TOTAL - 1],
     ...testimonials,
     testimonials[0],
   ];
 
-  /* HANDLE INFINITE RESET */
+  /* INFINITE RESET */
   useEffect(() => {
     if (!transition) return;
 
@@ -59,22 +59,21 @@ export default function RealEstateResultsCarousel() {
     }
   }, [index, transition]);
 
-  /* RE-ENABLE TRANSITION */
   useEffect(() => {
     if (!transition) {
       requestAnimationFrame(() => setTransition(true));
     }
   }, [transition]);
 
-  /* TOUCH SWIPE */
+  /* TOUCH */
   const handleTouchStart = (e: React.TouchEvent) => {
     touchStartX.current = e.touches[0].clientX;
   };
 
   const handleTouchEnd = (e: React.TouchEvent) => {
     if (touchStartX.current === null) return;
-
     const diff = touchStartX.current - e.changedTouches[0].clientX;
+
     if (diff > 50) setIndex(i => i + 1);
     if (diff < -50) setIndex(i => i - 1);
 
@@ -82,20 +81,21 @@ export default function RealEstateResultsCarousel() {
   };
 
   return (
-    <div className="relative mt-16">
-      {/* ARROWS */}
+    <div className="relative mt-16 px-[3vw]">
+      {/* LEFT ARROW */}
       <button
         onClick={() => setIndex(i => i - 1)}
-        className="hidden md:flex absolute -left-10 top-1/2 -translate-y-1/2 z-10 rounded-full bg-white/80 p-3 shadow-md"
+        className="absolute left-2 top-1/2 -translate-y-1/2 z-10 rounded-full bg-white/90 p-3 shadow-md"
       >
-        <ChevronLeft size={22} />
+        <ChevronLeft size={20} />
       </button>
 
+      {/* RIGHT ARROW */}
       <button
         onClick={() => setIndex(i => i + 1)}
-        className="hidden md:flex absolute -right-10 top-1/2 -translate-y-1/2 z-10 rounded-full bg-white/80 p-3 shadow-md"
+        className="absolute right-2 top-1/2 -translate-y-1/2 z-10 rounded-full bg-white/90 p-3 shadow-md"
       >
-        <ChevronRight size={22} />
+        <ChevronRight size={20} />
       </button>
 
       {/* SLIDER */}
@@ -105,16 +105,32 @@ export default function RealEstateResultsCarousel() {
         className="overflow-hidden"
       >
         <div
-          className={`flex gap-6 ${transition ? "transition-transform duration-500 ease-out" : ""}`}
-          style={{ transform: `translateX(-${index * (100 / visible)}%)` }}
+          className={`flex ${transition ? "transition-transform duration-500 ease-out" : ""}`}
+          style={{
+            transform: `translateX(-${index * (100 / visible)}%)`,
+          }}
         >
           {slides.map((t, i) => (
-            <div key={i} className="min-w-full sm:min-w-1/2 lg:min-w-1/3">
-              <div className="rounded-2xl border bg-white p-6 shadow-sm">
+            <div
+              key={i}
+              className="
+                shrink-0
+                w-full
+                sm:w-1/2
+                lg:w-1/3
+                flex justify-center
+              "
+            >
+              {/* COMPRESSED CARD */}
+              <div className="max-w-[360px] w-full rounded-2xl border bg-white p-6 shadow-sm">
                 <p className="italic text-sm text-slate-600 mb-4">
                   “{t.text}”
                 </p>
-                <img src={t.img} className="rounded-lg" alt="Testimonial" />
+                <img
+                  src={t.img}
+                  alt="Testimonial"
+                  className="rounded-lg w-full"
+                />
               </div>
             </div>
           ))}
