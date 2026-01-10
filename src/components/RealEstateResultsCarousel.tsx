@@ -6,9 +6,9 @@ const testimonials = [
   { text: "High-quality real estate leads and faster sales at a much lower CPL. - Srinivas", img: "/testimonial-2.jpeg" },
   { text: "More site visits and closed deals without increasing ad spend. - Deepika", img: "/testimonial-3.jpeg" },
   { text: "Stable leads and regular sales even for high-ticket projects. - Mahesh", img: "/testimonial-4.jpeg" },
-  { text: "Lower cost per lead and better follow-ups that convert. - Rahul", img: "/testimonial-1.jpeg" },
+  { text: "Lower cost per lead and better follow-ups that convert. - Karthikeya", img: "/testimonial-5.jpeg" },
   { text: "Consistent leads and sales across multiple locations with low budget. - Subhash Reddy", img: "/testimonial-2.jpeg" },
-  { text: "Finally achieving sales with Meta Ads without wasting money. - Ashok Naidu", img: "/testimonial-4.jpeg" },
+  { text: "Finally achieving sales with Meta Ads without wasting money. - Akshara", img: "/testimonial-6.jpeg" },
 ];
 
 const TOTAL = testimonials.length;
