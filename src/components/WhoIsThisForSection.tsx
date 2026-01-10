@@ -90,7 +90,7 @@ export default function WhoIsThisForSection() {
                                 </span>
 
                                 <p className="text-[15px] sm:text-base text-slate-700 leading-relaxed">
-                                    You are a <strong>developer, builder, or promoter</strong> who has tried
+                                    If You are a <strong>developer, builder, or promoter</strong> who has tried
                                     running Meta (Facebook / Instagram) ads but received
                                     <strong> low-quality or non-serious leads</strong>.
                                 </p>
@@ -101,7 +101,7 @@ export default function WhoIsThisForSection() {
                                     <FilledArrowIcon />
                                 </span>
                                 <p className="text-[15px] sm:text-base text-slate-700 leading-relaxed">
-                                    You are advertising <strong>open plots, flats, or villas</strong>, but
+                                    If You are advertising <strong>open plots, flats, or villas</strong>, but
                                     enquiries are not converting into
                                     <strong> site visits or sales</strong>.
                                 </p>
@@ -112,7 +112,7 @@ export default function WhoIsThisForSection() {
                                     <FilledArrowIcon />
                                 </span>
                                 <p className="text-[15px] sm:text-base text-slate-700 leading-relaxed">
-                                    Your <strong>ad cost increases</strong> the moment you raise budgets and
+                                    If Your <strong>ad cost increases</strong> the moment you raise budgets and
                                     performance becomes <strong>unstable</strong>.
                                 </p>
                             </li>
@@ -122,7 +122,7 @@ export default function WhoIsThisForSection() {
                                     <FilledArrowIcon />
                                 </span>
                                 <p className="text-[15px] sm:text-base text-slate-700 leading-relaxed">
-                                    You tried <strong>duplicating campaigns or ad sets</strong> to scale, but
+                                    If You tried <strong>duplicating campaigns or ad sets</strong> to scale, but
                                     results dropped or became <strong>inconsistent</strong>.
                                 </p>
                             </li>
@@ -132,7 +132,7 @@ export default function WhoIsThisForSection() {
                                     <FilledArrowIcon />
                                 </span>
                                 <p className="text-[15px] sm:text-base text-slate-700 leading-relaxed">
-                                    You feel <strong>confused about targeting, creatives,</strong> or campaign
+                                    If You feel <strong>confused about targeting, creatives,</strong> or campaign
                                     structure and unsure what truly works for
                                     <strong> real estate projects</strong>.
                                 </p>
@@ -143,7 +143,7 @@ export default function WhoIsThisForSection() {
                                     <FilledArrowIcon />
                                 </span>
                                 <p className="text-[15px] sm:text-base text-slate-700 leading-relaxed">
-                                    You want a <strong>simple, proven system</strong> to generate
+                                    If You want a <strong>simple, proven system</strong> to generate
                                     <strong> genuine high-intent real estate leads</strong> without wasting
                                     money.
                                 </p>
