@@ -10,7 +10,7 @@ type TimeLeft = {
 export default function CTA() {
   const handleJoinNow = () => {
     window.location.href =
-      "https://pages.razorpay.com/pl_S3EUOQjllEtft0/view";
+      "https://rzp.io/rzp/zgVglBoX";
   };
 
   // ✅ Lazy state initialization (NO setState in effect body)
