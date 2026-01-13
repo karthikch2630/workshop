@@ -1,60 +1,68 @@
 import { Play } from "lucide-react";
+import { useRef, useState } from "react";
 
 export default function HeroSection() {
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const playVideo = () => {
+    if (!videoRef.current) return;
+    videoRef.current.play();
+    setIsPlaying(true);
+  };
+
+  const pauseVideo = () => {
+    if (!videoRef.current) return;
+    videoRef.current.pause();
+    setIsPlaying(false);
+  };
+
   return (
     <section className="w-full bg-white">
-      {/* ================= TOP BAR ================= */}
+      {/* TOP BAR */}
       <div className="w-full bg-[#1e88e5] text-white text-sm py-2 px-4 text-center font-medium">
         🚨 ATTN: This is for real estate marketers & developers only
       </div>
 
-      {/* ================= HERO CONTENT ================= */}
+      {/* HERO CONTENT */}
       <div className="max-w-6xl mx-auto px-6 pt-20 pb-10 text-center">
-        {/* Headline */}
-        <h1 className=".font-albert-sans text-4xl sm:text-5xl md:text-5xl font-semibold leading-tight text-slate-900 font-eb-garamond">
+        <h1 className="text-4xl sm:text-5xl font-semibold leading-tight text-slate-900">
           Run{" "}
-          <span className="text-[#1e88e5] font-avenue">
-            High-Quality Real Estate Ads
-          </span>{" "}
+          <span className="text-[#1e88e5]">High-Quality Real Estate Ads</span>{" "}
           Peacefully using a{" "}
-          <span className="text-[#1e88e5] font-avenue">
-            Proven Meta Ads Method
-          </span>
+          <span className="text-[#1e88e5]">Proven Meta Ads Method</span>
         </h1>
 
-        {/* Description */}
-        <p className="mt-6 max-w-3xl mx-auto text-lg sm:text-xl md:text-2xl text-slate-600 leading-relaxed">
-          Learn the updated{" "}
-          <strong>2025 Meta Ads strategy</strong> to generate{" "}
-          <strong>high-intent leads</strong> for{" "}
-          <strong>
-            open plots, flats, villas, and real estate projects
-          </strong>{" "}
-          — without wasted ad spend or complicated campaign structures.
+        <p className="mt-6 max-w-3xl mx-auto text-lg sm:text-xl text-slate-600">
+          Learn the updated <strong>2025 Meta Ads strategy</strong> to generate{" "}
+          <strong>high-intent leads</strong> for real estate projects.
         </p>
 
-
-        {/* Quote */}
-        <p className="mt-4 text-sm sm:text-base italic text-slate-500">
-          “Starting small & scaling confidently”
-        </p>
-
-        {/* ================= VIDEO ================= */}
+        {/* VIDEO */}
         <div className="mt-14 flex justify-center">
-          <div className="relative w-full max-w-4xl aspect-video rounded-xl overflow-hidden border border-slate-200 shadow-lg bg-slate-100">
+          <div className="relative w-full max-w-4xl aspect-video rounded-xl overflow-hidden border shadow-lg bg-black">
             <video
-              className="w-full h-full object-cover"
-              poster="/video-thumbnail.jpg"
+              ref={videoRef}
+              className="w-full h-full object-contain"
+              poster="/hero-video-poster.jpg"
+              preload="metadata"
+              onClick={pauseVideo} // optional: click video to pause
+              onEnded={() => setIsPlaying(false)} // show button again when finished
             >
               <source src="/hero-video.mp4" type="video/mp4" />
             </video>
 
-            {/* Play Button */}
-            <button className="absolute inset-0 flex items-center justify-center bg-black/20 hover:bg-black/30 transition">
-              <div className="flex items-center justify-center w-20 h-20 rounded-full bg-[#1e88e5] shadow-xl">
-                <Play size={34} className="text-white ml-1" />
-              </div>
-            </button>
+            {/* ▶ PLAY BUTTON (HIDDEN WHEN PLAYING) */}
+            {!isPlaying && (
+              <button
+                onClick={playVideo}
+                className="absolute inset-0 flex items-center justify-center bg-black/30 hover:bg-black/40 transition"
+              >
+                <div className="flex items-center justify-center w-20 h-20 rounded-full bg-[#1e88e5] shadow-xl">
+                  <Play size={34} className="text-white ml-1" />
+                </div>
+              </button>
+            )}
           </div>
         </div>
       </div>

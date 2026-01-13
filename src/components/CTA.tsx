@@ -1,18 +1,33 @@
 export default function CTA() {
+  const handleJoinNow = () => {
+  window.location.href =
+    "https://pages.razorpay.com/pl_S3EUOQjllEtft0/view";
+};
+
   return (
     <>
       <style >{`
-        @keyframes shimmer {
-          0% {
-            transform: translateX(-100%);
-          }
-          100% {
-            transform: translateX(100%);
-          }
-        }
-        .animate-shimmer {
-          animation: shimmer 2s infinite;
-        }
+       @keyframes glow-move {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-glow {
+  animation: glow-move 3s ease-in-out infinite;
+}
+
+.group:hover .animate-glow {
+  animation-duration: 1.5s;
+  opacity: 0.9;
+}
+
       `}</style>
       <section className="w-full py-5">
       <div className="max-w-6xl mx-auto px-6">
@@ -59,25 +74,41 @@ export default function CTA() {
 
             {/* BUTTON */}
             <button
-              className="
-                relative z-10
-                w-full
-                bg-[#0ea5e9]
-                text-white
-                text-lg sm:text-xl
-                font-semibold
-                py-5
-                rounded-md
-                transition-transform
-                duration-200
-                active:scale-95
-                overflow-hidden
-                group
-              "
-            >
-              <span className="relative z-10">JOIN NOW AT ₹99</span>
-              <span className="absolute inset-0 bg-gradient-to-r from-transparent via-[#0284c7] to-transparent opacity-0 group-hover:opacity-100 group-hover:animate-shimmer"></span>
-            </button>
+  onClick={handleJoinNow}
+  className="
+    relative z-10
+    w-full
+    bg-[#0ea5e9]
+    text-white
+    text-lg sm:text-xl
+    font-semibold
+    py-5
+    rounded-md
+    transition-transform
+    duration-200
+    active:scale-95
+    overflow-hidden
+  "
+>
+  {/* TEXT */}
+  <span className="relative z-10">JOIN NOW AT ₹99</span>
+
+  {/* ALWAYS MOVING GLOW */}
+  <span
+    className="
+      pointer-events-none
+      absolute inset-0
+      bg-gradient-to-r
+      from-transparent
+      via-[#154053]
+      to-transparent
+      opacity-40
+      animate-glow
+    "
+  ></span>
+</button>
+
+
           </div>
 
           {/* SUB NOTE */}

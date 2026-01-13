@@ -171,3 +171,46 @@
     transform: translateX(4px);
   }
 }
+
+/* ===== Custom CTA Button Style (Elementor-like) ===== */
+.custom-cta-btn {
+  background-color: rgba(97, 206, 112, 0);
+  font-family: Roboto, sans-serif;
+  font-size: 23px;
+  font-weight: 400;
+  line-height: 26px;
+
+  color: #ffffff;
+  text-decoration: none;
+
+  padding: 2% 40%;
+  border: none;
+  border-radius: 0px;
+
+  box-shadow: rgba(0, 135, 248, 0.96) 0px 2px 9px 0px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+
+  cursor: pointer;
+  transition: 0.2s linear;
+}
+
+/* Hover */
+.custom-cta-btn:hover {
+  outline: none;
+  opacity: 0.95;
+}
+
+/* Focus */
+.custom-cta-btn:focus {
+  color: #ffffff;
+  outline: none;
+}
+
+/* Active */
+.custom-cta-btn:active {
+  transform: scale(0.98);
+}
