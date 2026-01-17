@@ -46,7 +46,7 @@ export default function HeroSection() {
   className="w-full h-full object-contain"
   preload="auto"
   playsInline
-  muted
+  
   autoPlay
   onLoadedData={(e) => {
     const video = e.currentTarget;
