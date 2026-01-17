@@ -1,21 +1,7 @@
-import { Play } from "lucide-react";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 
 export default function HeroSection() {
   const videoRef = useRef<HTMLVideoElement | null>(null);
-  const [isPlaying, setIsPlaying] = useState(false);
-
-  const playVideo = () => {
-    if (!videoRef.current) return;
-    videoRef.current.play();
-    setIsPlaying(true);
-  };
-
-  const pauseVideo = () => {
-    if (!videoRef.current) return;
-    videoRef.current.pause();
-    setIsPlaying(false);
-  };
 
   return (
     <section className="w-full bg-white">
@@ -40,37 +26,17 @@ export default function HeroSection() {
 
         {/* VIDEO */}
         <div className="mt-14 flex justify-center">
-          <div className="relative w-full max-w-4xl aspect-video rounded-xl overflow-hidden border shadow-lg bg-black">
+          <div className="relative w-full max-w-4xl aspect-video rounded-xl overflow-hidden shadow-xl bg-black">
             <video
-  ref={videoRef}
-  className="w-full h-full object-contain"
-  preload="auto"
-  playsInline
-  
-  autoPlay
-  onLoadedData={(e) => {
-    const video = e.currentTarget;
-    video.pause(); // 👈 renders first frame, then pauses
-    video.currentTime = 0;
-  }}
-  onClick={pauseVideo}
-  onEnded={() => setIsPlaying(false)}
->
-  <source src="/hero-video.mp4" type="video/mp4" />
-</video>
-
-
-            {/* ▶ PLAY BUTTON (HIDDEN WHEN PLAYING) */}
-            {!isPlaying && (
-              <button
-                onClick={playVideo}
-                className="absolute inset-0 flex items-center justify-center bg-black/30 hover:bg-black/40 transition"
-              >
-                <div className="flex items-center justify-center w-20 h-20 rounded-full bg-[#1e88e5] shadow-xl">
-                  <Play size={34} className="text-white ml-1" />
-                </div>
-              </button>
-            )}
+              ref={videoRef}
+              className="w-full h-full object-contain"
+              controls
+              preload="auto"
+              playsInline
+            >
+              <source src="/hero-video.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
           </div>
         </div>
       </div>
