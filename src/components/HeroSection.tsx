@@ -28,15 +28,18 @@ export default function HeroSection() {
         <div className="mt-14 flex justify-center">
           <div className="relative w-full max-w-4xl aspect-video rounded-xl overflow-hidden shadow-xl bg-black">
             <video
-              ref={videoRef}
-              className="w-full h-full object-contain"
-              controls
-              preload="auto"
-              playsInline
-            >
-              <source src="/hero-video.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+  ref={videoRef}
+  className="w-full h-full object-contain"
+  controls
+  preload="metadata"
+  playsInline
+  webkit-playsinline
+  poster="/hero-video-poster.png"
+>
+  <source src="/hero-video.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
+
           </div>
         </div>
       </div>
