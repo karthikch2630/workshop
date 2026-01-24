@@ -9,11 +9,9 @@ type TimeLeft = {
 
 export default function CTA() {
   const handleJoinNow = () => {
-    window.location.href =
-      "https://rzp.io/rzp/zgVglBoX";
+    window.location.href = "https://rzp.io/rzp/zgVglBoX";
   };
 
-  // ✅ Lazy state initialization (NO setState in effect body)
   const [timeLeft, setTimeLeft] = useState<TimeLeft>(() => ({
     days: 0,
     hours: 0,
@@ -22,26 +20,24 @@ export default function CTA() {
   }));
 
   useEffect(() => {
-    // ✅ targetDate moved inside effect
     const targetDate = new Date("2026-01-22T19:00:00");
 
     const calculateTimeLeft = () => {
       const now = Date.now();
-      const difference = targetDate.getTime() - now;
+      const diff = targetDate.getTime() - now;
 
-      if (difference <= 0) {
+      if (diff <= 0) {
         return { days: 0, hours: 0, minutes: 0, seconds: 0 };
       }
 
       return {
-        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-        minutes: Math.floor((difference / (1000 * 60)) % 60),
-        seconds: Math.floor((difference / 1000) % 60),
+        days: Math.floor(diff / (1000 * 60 * 60 * 24)),
+        hours: Math.floor((diff / (1000 * 60 * 60)) % 24),
+        minutes: Math.floor((diff / (1000 * 60)) % 60),
+        seconds: Math.floor((diff / 1000) % 60),
       };
     };
 
-    // ✅ setState ONLY inside interval callback
     const timer = setInterval(() => {
       setTimeLeft(calculateTimeLeft());
     }, 1000);
@@ -51,13 +47,13 @@ export default function CTA() {
 
   return (
     <>
+      {/* Safari-safe glow animation */}
       <style>{`
         @keyframes glow-move {
-          0% { transform: translateX(-100%); }
-          50% { transform: translateX(100%); }
-          100% { transform: translateX(-100%); }
+          0% { transform: translateX(-120%); }
+          50% { transform: translateX(120%); }
+          100% { transform: translateX(-120%); }
         }
-
         .animate-glow {
           animation: glow-move 3s ease-in-out infinite;
         }
@@ -65,7 +61,8 @@ export default function CTA() {
 
       <section className="w-full py-5">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="border border-slate-200 rounded-xl bg-[#f7f6f4] px-6 sm:px-10 py-12 text-center">
+          {/* IMPORTANT: overflow-hidden fixes Safari hairlines */}
+          <div className="border border-slate-200 rounded-xl bg-[#f7f6f4] px-6 sm:px-10 py-12 text-center overflow-hidden">
             {/* COUNTDOWN */}
             <p className="text-slate-500 text-sm mb-2">
               Workshop begins in
@@ -102,11 +99,37 @@ export default function CTA() {
 
             {/* CTA BUTTON */}
             <div className="relative w-full max-w-3xl mx-auto flex justify-center">
-              {/* RAYS */}
-              <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-[140%] h-[160%] bg-[conic-gradient(from_180deg,rgba(14,165,233,0.35),transparent,rgba(14,165,233,0.35))] blur-3xl opacity-70"></div>
+              {/* RAYS (Safari GPU-safe) */}
+              <div
+                className="
+                  absolute
+                  -top-10
+                  left-1/2
+                  -translate-x-1/2
+                  w-[140%]
+                  h-[160%]
+                  bg-[conic-gradient(from_180deg,rgba(14,165,233,0.35),transparent,rgba(14,165,233,0.35))]
+                  blur-[28px]
+                  opacity-70
+                  transform-gpu
+                  will-change-transform
+                  pointer-events-none
+                "
+              />
 
               {/* CORE GLOW */}
-              <div className="absolute inset-0 rounded-md bg-[#0ea5e9]/50 blur-2xl"></div>
+              <div
+                className="
+                  absolute
+                  inset-0
+                  rounded-md
+                  bg-[#0ea5e9]/50
+                  blur-[20px]
+                  transform-gpu
+                  will-change-transform
+                  pointer-events-none
+                "
+              />
 
               {/* BUTTON */}
               <button
@@ -140,8 +163,9 @@ export default function CTA() {
                     to-transparent
                     opacity-40
                     animate-glow
+                    transform-gpu
                   "
-                ></span>
+                />
               </button>
             </div>
 
@@ -150,9 +174,13 @@ export default function CTA() {
               ⚠️ Join if it feels right. No pressure (:
             </p>
 
-            {/* TRUST BADGES */}
+            {/* TRUST BADGE */}
             <div className="mt-10 flex justify-center gap-6 flex-wrap opacity-90">
-              <img src="/ctaimage.png" alt="Money Back" className="h-10" />
+              <img
+                src="/ctaimage.png"
+                alt="Money Back Guarantee"
+                className="h-10"
+              />
             </div>
           </div>
         </div>
